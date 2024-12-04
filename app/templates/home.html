@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block content %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if username %}Hello {{ username }}{% else %}Running Website{% endif %}</title>
+</head>
+
+<style>
+ 
+    
+    .title {
+        font-size: 3em;
+        color: black; 
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+
+    .katherina {
+        color: light gray; 
+        font-size: 1.2em;
+        font-style: italic;
+    }
+
+   
+    .btn-primary {
+        background-color: #ADD8E6; 
+        color: black;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1.2em;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    .btn-success {
+        background-color: #90EE90; 
+        color: black;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1.2em;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-success:hover {
+        background-color: #218838; 
+    }
+
+    .content-section {
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffff; /* White background */
+        border: 1px solid #ddd; /* Light gray border */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        width: 90%; /* Take up 90% of the screen width */
+        
+    }
+
+    
+    .content-section h3 {
+        font-size: 1.8em; /* Larger font size for headings */
+        color: #343a40; /* Dark gray for contrast */
+        margin-bottom: 10px; /* Spacing below headings */
+        border-bottom: 2px solid #007bff; /* Blue underline for headings */
+        padding-bottom: 5px; /* Add padding for visual separation */
+    }
+
+    /* Styling for the paragraphs */
+    .content-section p {
+        font-size: 1em;
+        color: #6c757d; /* Subtle gray for text */
+        line-height: 1.6; /* Better readability with line height */
+        margin-bottom: 20px; /* Spacing between paragraphs */
+    }
+</style>
+
+
+<div class="container mt-5">
+    <div class="text-center">
+        <h1 class="title">Running Website</h1>
+        <h6 class="katherina">By Katherina Warren</h6>
+        <div class="mt-4">
+            <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg mx-2">Login Page</a>
+            <a href="{{ url_for('register') }}" class="btn btn-success btn-lg mx-2">Register</a>
+        </div>
+    </div>
+    <div class="content-section mt-5">
+        <h3>Why Running</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras vehicula nisi id mi fermentum, sit amet consectetur justo varius.</p>
+        
+        <h3>Benafits to running</h3>
+        <p>Praesent sed elit et eros fringilla volutpat. Duis ultricies ex vel nunc varius, vel tincidunt felis bibendum. Suspendisse potenti. Curabitur sit amet ultricies tortor.</p>
+    
+        <h3>Races</h3>
+        <p>Aliquam scelerisque tortor in nunc tincidunt, quis vulputate purus pulvinar. Nam a bibendum erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+    </div>
+{% endblock %}
